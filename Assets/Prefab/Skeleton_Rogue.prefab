@@ -69,6 +69,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
       insertIndex: -1
       addedObject: {fileID: -3726861518072723103}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7892613949338816975}
   m_SourcePrefab: {fileID: 100100000, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
 --- !u!1 &7563884155858433961 stripped
 GameObject:
@@ -139,3 +142,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7892613949338816975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563884155858433961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14042a1237c43b440915759571739789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  enemyPrefab: {fileID: 4538842238240047332, guid: b9ff0d0ec357dca438f11620c8d460a6, type: 3}
+  spawnPosition: {x: 6.99, y: 0.85, z: 12.91}

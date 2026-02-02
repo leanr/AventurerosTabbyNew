@@ -11,7 +11,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public void SetRunning(bool isRunning)
     {
-        animator.SetBool("IsRunning", isRunning);
+        //animator.SetBool("IsRunning", isRunning);
     }
 
     public void PlayHit()
