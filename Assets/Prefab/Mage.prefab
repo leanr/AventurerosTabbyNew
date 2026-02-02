@@ -66,6 +66,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8750f2f8284e6440953a543341413c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: -106037422739241129}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8750f2f8284e6440953a543341413c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 288300041704533956}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8750f2f8284e6440953a543341413c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -814849920372009763}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8750f2f8284e6440953a543341413c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3745098355490898220}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8750f2f8284e6440953a543341413c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2300616315300638675}
   m_SourcePrefab: {fileID: 100100000, guid: e8750f2f8284e6440953a543341413c9, type: 3}
 --- !u!1 &8800393532869012477 stripped
 GameObject:
@@ -84,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99583724d5394a4f9907d0e8502ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  speed: 0.5
+  speed: 3
   canMove: 1
 --- !u!95 &-106037422739241129
 Animator:
@@ -108,3 +120,75 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!54 &288300041704533956
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800393532869012477}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-814849920372009763
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800393532869012477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3745098355490898220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800393532869012477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ce6c04f1f7b604291a6e2e3b60d863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!114 &2300616315300638675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800393532869012477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec03077e1dba93459ed770f1873cf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator

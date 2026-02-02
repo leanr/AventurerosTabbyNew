@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
     Movement movement;
     PlayerAnimator playerAnimator;
 
+    bool isHit;
+
     void Awake()
     {
         movement = GetComponent<Movement>();
@@ -13,16 +15,30 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Ejemplo: animación de correr
-        playerAnimator.PlayRun(movement.canMove);
+        // Solo actualiza run si NO está en hit
+        if (!isHit)
+        {
+            playerAnimator.SetRunning(movement.canMove);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("SkeletonRogue"))
+
+           
         {
-            playerAnimator.PlayHit();
+            isHit = true;
             movement.canMove = false;
+            print("estoy chocando");
+            playerAnimator.PlayHit();
         }
+    }
+
+    // Llamado por Animation Event al final del hit
+    public void OnHitFinished()
+    {
+        isHit = false;
+        movement.canMove = true;
     }
 }

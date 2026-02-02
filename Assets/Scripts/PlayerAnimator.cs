@@ -9,14 +9,14 @@ public class PlayerAnimator : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Solo métodos públicos que disparan animaciones
-    public void PlayHit()
-    {
-        animator.SetTrigger("hitWithSkeletonRogue");
-    }
-
-    public void PlayRun(bool isRunning)
+    public void SetRunning(bool isRunning)
     {
         animator.SetBool("IsRunning", isRunning);
+    }
+
+    public void PlayHit()
+    {
+        animator.ResetTrigger("Hit");
+        animator.SetTrigger("Hit");
     }
 }
