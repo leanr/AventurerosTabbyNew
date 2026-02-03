@@ -34,6 +34,30 @@ public class PlayerController : MonoBehaviour
 
             
         }
+
+        if (collision.gameObject.CompareTag("SkeletonMinion"))
+
+
+        {
+            isHit = true;
+            movement.canMove = false;
+            print("estoy chocando con el otro enemigo");
+            playerAnimator.PlayHit();
+
+
+        }
+
+        if (collision.gameObject.CompareTag("SkeletonWarrior"))
+
+
+        {
+            isHit = true;
+            movement.canMove = false;
+            print("estoy chocando con el otro enemigo");
+            playerAnimator.PlayHit();
+
+
+        }
     }
 
     // Llamado por Animation Event al final del hit
@@ -50,6 +74,27 @@ public class PlayerController : MonoBehaviour
         foreach (Collider hit in hits)
         {
             if (hit.CompareTag("SkeletonRogue"))
+            {
+                // Llama al TakeDamage del EnemyController
+                EnemyController enemy = hit.GetComponent<EnemyController>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(); // destruye el enemigo
+                }
+            }
+
+            if (hit.CompareTag("SkeletonMinion"))
+            {
+                // Llama al TakeDamage del EnemyController
+                EnemyController enemy = hit.GetComponent<EnemyController>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(); // destruye el enemigo
+                }
+            }
+
+
+            if (hit.CompareTag("SkeletonWarrior"))
             {
                 // Llama al TakeDamage del EnemyController
                 EnemyController enemy = hit.GetComponent<EnemyController>();

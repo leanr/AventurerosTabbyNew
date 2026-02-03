@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton_Warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 54ef7453fb31d204384540b8742d7bba, type: 3}
+      propertyPath: m_TagString
+      value: SkeletonWarrior
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -104,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   enemyPrefab: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
+  respawnUI: {fileID: 0}
 --- !u!54 &448289196434797344
 Rigidbody:
   m_ObjectHideFlags: 0

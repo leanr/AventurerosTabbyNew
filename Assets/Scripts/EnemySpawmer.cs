@@ -6,11 +6,35 @@ public class EnemySpawner : MonoBehaviour
     public Transform spawnPoint;     // Lugar exacto donde aparecerá
 
     // Llamar cuando quieras generar un enemigo
-    public void SpawnEnemy()
+
+    public GameObject enemyA;
+    public GameObject enemyB;
+    public GameObject enemyC;
+
+
+
+    public void SpawnEnemy(int enemyType)
     {
-        if (enemyPrefab != null && spawnPoint != null)
+
+        GameObject enemyToSpawn = null;
+
+
+        switch (enemyType)
         {
-            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            case 0:
+                enemyToSpawn = enemyA;
+                break;
+            case 1:
+                enemyToSpawn = enemyB;
+                break;
+            case 2:
+                enemyToSpawn = enemyC;
+                break;
+        }
+
+        if (enemyToSpawn != null)
+        {
+            Instantiate(enemyToSpawn, spawnPoint.position, Quaternion.identity);
         }
     }
 }

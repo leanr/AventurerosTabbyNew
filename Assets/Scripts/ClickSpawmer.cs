@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextSpawnTime)
         {
+
             Spawn();
             nextSpawnTime = Time.time + spawnDelay;
         }

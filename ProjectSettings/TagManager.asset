@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Mage
   - SkeletonRogue
+  - SkeletonMinion
+  - SkeletonWarrior
   layers:
   - Default
   - TransparentFX
