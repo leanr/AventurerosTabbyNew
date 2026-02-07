@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99583724d5394a4f9907d0e8502ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  speed: 3
+  speed: 1
   canMove: 1
 --- !u!95 &-106037422739241129
 Animator:
@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ce6c04f1f7b604291a6e2e3b60d863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  maxHealth: 100
 --- !u!114 &2300616315300638675
 MonoBehaviour:
   m_ObjectHideFlags: 0

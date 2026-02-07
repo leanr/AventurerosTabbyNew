@@ -8,6 +8,7 @@ TagManager:
   - SkeletonRogue
   - SkeletonMinion
   - SkeletonWarrior
+  - Arrow
   layers:
   - Default
   - TransparentFX
