@@ -11,6 +11,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyB;
     public GameObject enemyC;
 
+   
+
 
 
     public void SpawnEnemy(int enemyType)
@@ -18,23 +20,30 @@ public class EnemySpawner : MonoBehaviour
 
         GameObject enemyToSpawn = null;
 
-
+        
         switch (enemyType)
         {
             case 0:
                 enemyToSpawn = enemyA;
+                    
                 break;
             case 1:
                 enemyToSpawn = enemyB;
+                  
                 break;
             case 2:
                 enemyToSpawn = enemyC;
+                  
                 break;
         }
+        
+        
 
         if (enemyToSpawn != null)
         {
             Instantiate(enemyToSpawn, spawnPoint.position, Quaternion.identity);
         }
     }
+
+
 }

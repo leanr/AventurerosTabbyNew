@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour
     {
         playerIsDead = true;                   // bloquea todo
         movement.canMove = false;         // asegurate de que no pueda moverse
-         playerAnimator.StopMovementAnimations();
+        playerAnimator.StopMovementAnimations();
         playerAnimator.SetDeath();        // dispara animación de muerte
        
     }
@@ -188,7 +188,9 @@ public class PlayerController : MonoBehaviour
     public void DeathFinished()
     {
         Debug.Log("El jugador murió");
-       // movement.canMove = false;
+        // movement.canMove = false;
+        GameManager.instance.PlayerDied();
+        print("aumento mi numero de muertes");
         Destroy(gameObject);
 
 

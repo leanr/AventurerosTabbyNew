@@ -156,4 +156,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   enemyPrefab: {fileID: 4538842238240047332, guid: b9ff0d0ec357dca438f11620c8d460a6, type: 3}
   spawnPosition: {x: 6.99, y: 0.85, z: 12.91}
-  respawnUI: {fileID: 5350308790812849204, guid: 6fcfa77caf55cf5479c4f67108244652, type: 3}
+  respawnUI: {fileID: 1211724892435196852, guid: 4c3a11a50b3f9914bb6cc0c973d8eb6b, type: 3}
+  dropPrefab: {fileID: 5403641842660797791, guid: 185ff7589c9d007448db611f9cd76ccc, type: 3}
