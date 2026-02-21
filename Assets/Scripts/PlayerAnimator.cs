@@ -39,4 +39,12 @@ public class PlayerAnimator : MonoBehaviour
         animator.ResetTrigger("HitAventurero");
         animator.SetBool("IsRunning", false);
     }
+
+    public void PlayEnemyDeath()
+    {
+        animator.ResetTrigger("DeathEnemy");
+        animator.SetTrigger("DeathEnemy");
+    }
+
+
 }

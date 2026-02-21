@@ -49,4 +49,14 @@ public class EnemyController : MonoBehaviour
     }
 
 
+    public void DeathFinished()
+    {
+        print("llegue al final");
+        Destroy(gameObject);
+
+
+
+    }
+
+
 }
