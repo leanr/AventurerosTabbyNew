@@ -87,7 +87,7 @@ ModelImporter:
       - time: 0.8373786
         functionName: DeathFinished
         data: 
-        objectReferenceParameter: {fileID: 8800393532869012477, guid: 9d1a0ef06de37ae448e8d7d54f85927b, type: 3}
+        objectReferenceParameter: {fileID: 7563884155858433961, guid: c75e272c7edeb2e46bf7191e4003951c, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

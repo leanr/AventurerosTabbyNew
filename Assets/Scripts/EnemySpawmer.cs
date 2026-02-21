@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;   // Prefab del enemigo
-    public Transform spawnPoint;     // Lugar exacto donde aparecerá
+    public Transform[] spawnPoints;     // Lugar exacto donde aparecerá
 
     // Llamar cuando quieras generar un enemigo
 
@@ -36,12 +36,16 @@ public class EnemySpawner : MonoBehaviour
                   
                 break;
         }
-        
-        
 
-        if (enemyToSpawn != null)
+
+
+        if (enemyToSpawn != null && spawnPoints.Length > 0)
         {
-            Instantiate(enemyToSpawn, spawnPoint.position, Quaternion.identity);
+            // elegir punto random
+            int index = Random.Range(0, spawnPoints.Length);
+            Transform chosenPoint = spawnPoints[index];
+
+            Instantiate(enemyToSpawn, chosenPoint.position, Quaternion.identity);
         }
     }
 

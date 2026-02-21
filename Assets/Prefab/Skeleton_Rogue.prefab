@@ -72,7 +72,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
       insertIndex: -1
       addedObject: {fileID: -7892613949338816975}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7788251733220152163}
   m_SourcePrefab: {fileID: 100100000, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
+--- !u!4 &7184226826084281619 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
+  m_PrefabInstance: {fileID: 7221866430615554808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7563884155858433961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
@@ -91,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyShooter
   arrowPrefab: {fileID: 3474789505597300833, guid: cb3f491c711309242a423fd6c1327f91, type: 3}
-  shootPoint: {fileID: 6910491211951867203, guid: 2ab1fa1626fcc1e40acf72ccfab66ce3, type: 3}
+  shootPoint: {fileID: 7184226826084281619}
   canShoot: 1
   fireRate: 3
 --- !u!54 &1532320634850066679
@@ -158,3 +166,26 @@ MonoBehaviour:
   spawnPosition: {x: 6.99, y: 0.85, z: 12.91}
   respawnUI: {fileID: 1211724892435196852, guid: 4c3a11a50b3f9914bb6cc0c973d8eb6b, type: 3}
   dropPrefab: {fileID: 5403641842660797791, guid: 185ff7589c9d007448db611f9cd76ccc, type: 3}
+  playerAnimator: {fileID: 2300616315300638675, guid: 9d1a0ef06de37ae448e8d7d54f85927b, type: 3}
+--- !u!95 &-7788251733220152163
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563884155858433961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94b187a8195f8234aa66cab30a332273, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

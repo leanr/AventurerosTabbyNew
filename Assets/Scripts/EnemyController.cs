@@ -9,9 +9,12 @@ public class EnemyController : MonoBehaviour
     [Header("Drop que suelta este enemigo")]
     public GameObject dropPrefab;
 
-    
+    bool puedoInvocar = false;
 
-    
+
+
+
+
 
     public void TakeDamage()
     {
@@ -21,9 +24,20 @@ public class EnemyController : MonoBehaviour
         SpawnDrop(); // <-- agregamos esto para que suelte moneda/llave
         print("aumento mi numero de enemigos matados");
         GameManager.instance.EnemyDied();
-        respawnUI.Show();      
+        respawnUI.Show();
+
+        /*
+        if (playerAnimator != null)
+        {
+            print("el playeranimator va bien");
+            playerAnimator.PlayEnemyDeath();
+        }
+   
+        */
         Destroy(gameObject);
-        
+
+
+
         /*
         if (enemyPrefab != null)
         {
@@ -37,6 +51,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Mage"))
         {
             //esta logica esta en PlayerController
+           // playerAnimator.PlayEnemyDeath();
         }
     }
 
@@ -47,6 +62,18 @@ public class EnemyController : MonoBehaviour
         if (dropPrefab != null)
             Instantiate(dropPrefab, transform.position, Quaternion.identity);
     }
+
+
+    public void DeathFinished()
+    {
+        print("llegue al final");
+        Destroy(gameObject);
+
+
+      
+    }
+
+
 
 
 }
