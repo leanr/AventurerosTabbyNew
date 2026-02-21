@@ -103,7 +103,6 @@ public class PlayerController : MonoBehaviour
         isHit = false;
         movement.canMove = true;
         playerAnimator.SetRunning(movement.canMove);
-        
     }
 
     public void RecieveHitFinished()

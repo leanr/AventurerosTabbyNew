@@ -17,7 +17,6 @@ public class PlayerAnimator : MonoBehaviour
     public void PlayHit()
     {
         animator.ResetTrigger("Hit");
-
         animator.SetTrigger("Hit");
     }
 
@@ -31,12 +30,6 @@ public class PlayerAnimator : MonoBehaviour
     {
         animator.ResetTrigger("Death");
         animator.SetTrigger("Death");
-    }
-
-    public void PlayEnemyDeath()
-    {
-        animator.ResetTrigger("DeathEnemy");
-        animator.SetTrigger("DeathEnemy");
     }
 
     public void StopMovementAnimations()

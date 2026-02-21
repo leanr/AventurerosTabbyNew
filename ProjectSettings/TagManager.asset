@@ -9,7 +9,6 @@ TagManager:
   - SkeletonMinion
   - SkeletonWarrior
   - Arrow
-  - Axe
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Floor
-  - Clickable
+  - 
   - 
   - 
   - 

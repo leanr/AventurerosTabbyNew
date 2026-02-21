@@ -6,11 +6,6 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         transform.Translate(0, 0, -0.05f, Space.World);
-
-        if (CompareTag("Axe"))
-        {
-            transform.Rotate(0, 0, 500 * Time.deltaTime);
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
