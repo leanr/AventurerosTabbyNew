@@ -39,22 +39,23 @@ public class PlayerController : MonoBehaviour
             isHit = true;
             movement.canMove = false;
             print("estoy chocando");
-            playerAnimator.PlayHit();
-       
+            // playerAnimator.PlayHit();
+            playerAnimator.TryPlayHit(collision.gameObject);
 
 
         }
 
 
-        if (collision.gameObject.CompareTag("SkeletonRogue"))
+        if (collision.gameObject.CompareTag("SkeletonWarrior"))
 
 
         {
             isHit = true;
             movement.canMove = false;
             print("estoy chocando");
-            playerAnimator.PlayHit();
-    
+            //playerAnimator.PlayHit();
+            playerAnimator.TryPlayHit(collision.gameObject);
+
 
 
         }
@@ -67,19 +68,8 @@ public class PlayerController : MonoBehaviour
             movement.canMove = false;
             print("estoy chocando con el otro enemigo");
             playerAnimator.PlayHit();
-           
+            playerAnimator.TryPlayHit(collision.gameObject);
 
-        }
-
-        if (collision.gameObject.CompareTag("SkeletonWarrior"))
-
-
-        {
-            isHit = true;
-            movement.canMove = false;
-            print("estoy chocando con el otro enemigo");
-            playerAnimator.PlayHit();
-      
 
         }
 
@@ -123,7 +113,7 @@ public class PlayerController : MonoBehaviour
             {
                 // Llama al TakeDamage del EnemyController
                 EnemyController enemy = hit.GetComponent<EnemyController>();
-                if (enemy != null)
+                if (enemy != null && enemy.isAlive && !enemy.isDying)
                 {
                     enemy.TakeDamage(); // destruye el enemigo
                 }
@@ -133,7 +123,7 @@ public class PlayerController : MonoBehaviour
             {
                 // Llama al TakeDamage del EnemyController
                 EnemyController enemy = hit.GetComponent<EnemyController>();
-                if (enemy != null)
+                if (enemy != null && enemy.isAlive && !enemy.isDying)
                 {
                     enemy.TakeDamage(); // destruye el enemigo
                 }
@@ -144,7 +134,7 @@ public class PlayerController : MonoBehaviour
             {
                 // Llama al TakeDamage del EnemyController
                 EnemyController enemy = hit.GetComponent<EnemyController>();
-                if (enemy != null)
+                if (enemy != null && enemy.isAlive && !enemy.isDying)
                 {
                     enemy.TakeDamage(); // destruye el enemigo
                 }

@@ -1,42 +1,30 @@
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class ClickSpawner : MonoBehaviour
 {
     public GameObject prefab;
-    public Transform spawnPoint;
-
-    public float spawnDelay = 0.5f; // medio segundo
+    public float spawnDelay = 0.5f;
     private float nextSpawnTime = 0f;
-
-    public LayerMask blockedLayer; // objetos que NO deben permitir spawn
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextSpawnTime)
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (ClickIsBlocked()) return;
+            if (Physics.Raycast(ray, out RaycastHit hit, 100f))
+            {
+                // Solo spawnear si el collider es BoxCollider (baldosa)
+                if (hit.collider is BoxCollider box)
+                {
+                    // Spawn en el centro de la baldosa que clickeaste
+                    Vector3 spawnPos = box.transform.position + box.center;
+                    spawnPos.y = prefab.transform.localScale.y / 2f; // encima de la baldosa
 
-            Spawn();
-            nextSpawnTime = Time.time + spawnDelay;
+                    Instantiate(prefab, spawnPos, Quaternion.identity);
+                    nextSpawnTime = Time.time + spawnDelay;
+                }
+            }
         }
-    }
-
-    void Spawn()
-    {
-        Instantiate(
-            prefab,
-            spawnPoint.position,
-            spawnPoint.rotation
-        );
-    }
-
-    bool ClickIsBlocked()
-    {
-        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero, 1f, blockedLayer);
-
-        return hit.collider != null;
     }
 }

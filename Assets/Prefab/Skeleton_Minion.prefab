@@ -72,6 +72,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2315931285199036505}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6496213805226595686}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6761999961502680700}
   m_SourcePrefab: {fileID: 100100000, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
 --- !u!1 &7438455333665954912 stripped
 GameObject:
@@ -110,6 +116,7 @@ MonoBehaviour:
   shootPoint: {fileID: 6910491211951867203, guid: a13c43356d790044f8d9bc1481414bac, type: 3}
   canShoot: 1
   fireRate: 3
+  detectionDistance: 10
 --- !u!54 &-3377879166107006260
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,3 +165,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &-6496213805226595686
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7438455333665954912}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5343587a849a0ed40901838741627f1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6761999961502680700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7438455333665954912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec03077e1dba93459ed770f1873cf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator

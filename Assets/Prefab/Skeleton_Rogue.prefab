@@ -72,6 +72,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
       insertIndex: -1
       addedObject: {fileID: -7892613949338816975}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8311542156495163019}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4693663085057766751}
   m_SourcePrefab: {fileID: 100100000, guid: 8ceb12f250afff34981ef26aad146c24, type: 3}
 --- !u!1 &7563884155858433961 stripped
 GameObject:
@@ -94,6 +100,7 @@ MonoBehaviour:
   shootPoint: {fileID: 6910491211951867203, guid: 2ab1fa1626fcc1e40acf72ccfab66ce3, type: 3}
   canShoot: 1
   fireRate: 3
+  detectionDistance: 10
 --- !u!54 &1532320634850066679
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,3 +165,37 @@ MonoBehaviour:
   spawnPosition: {x: 6.99, y: 0.85, z: 12.91}
   respawnUI: {fileID: 1211724892435196852, guid: 4c3a11a50b3f9914bb6cc0c973d8eb6b, type: 3}
   dropPrefab: {fileID: 5403641842660797791, guid: 185ff7589c9d007448db611f9cd76ccc, type: 3}
+--- !u!95 &8311542156495163019
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563884155858433961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5343587a849a0ed40901838741627f1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-4693663085057766751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563884155858433961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec03077e1dba93459ed770f1873cf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator

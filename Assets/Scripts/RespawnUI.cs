@@ -15,7 +15,8 @@ public class RespawnUI : MonoBehaviour
     {
         //gameObject.SetActive(true);
         
-        Time.timeScale = 0f; // pausa el juego
+        //Time.timeScale = 0f; // pausa el juego
+        //saco la pausa
   
 
     }

@@ -20,6 +20,18 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetTrigger("Hit");
     }
 
+    public void TryPlayHit(GameObject enemyObj)
+    {
+        EnemyController enemy = enemyObj.GetComponent<EnemyController>();
+
+        // Si el enemigo no existe o está muriendo, no reproducir animación
+        if (enemy == null || enemy.isDying) return;
+
+        // Si el enemigo puede recibir daño, reproducimos el Hit
+        animator.ResetTrigger("Hit");
+        animator.SetTrigger("Hit");
+    }
+
     public void RecieveHit()
     {
         animator.ResetTrigger("HitAventurero");
