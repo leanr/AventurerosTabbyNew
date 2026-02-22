@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class    EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;   // Prefab del enemigo
-    public Transform spawnPoint;     // Lugar exacto donde aparecerá
+    public Transform spawnPointA;     // Lugar exacto donde aparecerá
+    public Transform spawnPointB;
+    public Transform spawnPointC;
 
+    public Transform spawnPoint;
     // Llamar cuando quieras generar un enemigo
 
     public GameObject enemyA;
@@ -25,15 +28,18 @@ public class EnemySpawner : MonoBehaviour
         {
             case 0:
                 enemyToSpawn = enemyA;
-                    
+                spawnPoint = spawnPointA;
+
                 break;
             case 1:
                 enemyToSpawn = enemyB;
-                  
+                spawnPoint = spawnPointB;
+
                 break;
             case 2:
                 enemyToSpawn = enemyC;
-                  
+                spawnPoint = spawnPointC;
+
                 break;
         }
         

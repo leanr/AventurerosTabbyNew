@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ee2f39608beb11a45bbc9e41dc22ff9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -100,6 +100,9 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 0, z: 0}
   respawnUI: {fileID: 1211724892435196852, guid: 4c3a11a50b3f9914bb6cc0c973d8eb6b, type: 3}
   dropPrefab: {fileID: 5403641842660797791, guid: 185ff7589c9d007448db611f9cd76ccc, type: 3}
+  spawner: {fileID: 0}
+  isAlive: 1
+  isDying: 0
 --- !u!114 &2144351183731081760
 MonoBehaviour:
   m_ObjectHideFlags: 0
